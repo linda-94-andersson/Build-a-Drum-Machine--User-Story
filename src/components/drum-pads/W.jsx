@@ -8,7 +8,11 @@ const W = () => {
 
   return (
     <button id="heater-2" className="drum-pad" onClick={handleClick}>
-      <audio id="W" className="clip">
+      <audio
+        id="W"
+        className="clip"
+        src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"
+      >
         <source
           src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"
           type="audio/mpeg"
