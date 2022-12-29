@@ -1,8 +1,13 @@
 import React from "react";
 
 const Q = () => {
+  const handleClick = () => {
+    const audio = document.getElementById("Q");
+    audio.play();
+  };
+
   return (
-    <button id="heater-1" className="drum-pad">
+    <button id="heater-1" className="drum-pad" onClick={handleClick}>
       <audio id="Q" className="clip">
         <source
           src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"
