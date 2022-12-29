@@ -1,13 +1,28 @@
 import React from "react";
 
 const X = () => {
-  const handleClick = () => {
+  const playSound = () => {
     const audio = document.getElementById("X");
     audio.play();
   };
 
+  const handleClick = () => {
+    playSound();
+  };
+
+  const handleKey = (e) => {
+    if (e.key === "x" || e.key === "X") {
+      playSound();
+    }
+  };
+
   return (
-    <button id="kick" className="drum-pad" onClick={handleClick}>
+    <button
+      id="kick"
+      className="drum-pad"
+      onClick={handleClick}
+      onKeyDown={(e) => handleKey(e)}
+    >
       <audio
         id="X"
         className="clip"
