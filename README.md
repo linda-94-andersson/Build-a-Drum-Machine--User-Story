@@ -1,8 +1,7 @@
 ## Deployment
-* WORK IN PROGRESS
+* https://linda-andersson-drum-machine.netlify.app/ 
 
 ## Skills used for this project
-* WORK IN PROGRESS
 * React
 * Javascript
 * CSS
