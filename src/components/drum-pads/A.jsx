@@ -1,6 +1,6 @@
 import React from "react";
 
-const A = () => {
+const A = ({ onButtonClick }) => {
   const playSound = () => {
     const audio = document.getElementById("A");
     audio.play();
@@ -8,11 +8,13 @@ const A = () => {
 
   const handleClick = () => {
     playSound();
+    onButtonClick("heater-4");
   };
 
   const handleKey = (e) => {
     if (e.key === "a" || e.key === "A") {
       playSound();
+      onButtonClick("heater-4");
     }
   };
 
