@@ -1,4 +1,4 @@
-import react from "react";
+import React, { useState } from "react";
 import Display from "./components/Display";
 import A from "./components/drum-pads/A";
 import C from "./components/drum-pads/C";
@@ -11,21 +11,27 @@ import X from "./components/drum-pads/X";
 import Z from "./components/drum-pads/Z";
 
 function App() {
+  const [buttonId, setButtonId] = useState("");
+
+  const handleButtonClick = (id) => {
+    setButtonId(id);
+  };
+
   return (
     <section>
       <div id="drum-machine">
         <div id="drum-pads">
-          <Q />
-          <W />
-          <E />
-          <A />
-          <S />
-          <D />
-          <Z />
-          <X />
-          <C />
+          <Q onButtonClick={handleButtonClick} />
+          <W onButtonClick={handleButtonClick} />
+          <E onButtonClick={handleButtonClick} />
+          <A onButtonClick={handleButtonClick} />
+          <S onButtonClick={handleButtonClick} />
+          <D onButtonClick={handleButtonClick} />
+          <Z onButtonClick={handleButtonClick} />
+          <X onButtonClick={handleButtonClick} />
+          <C onButtonClick={handleButtonClick} />
         </div>
-        <Display />
+        <Display text={buttonId} />
       </div>
     </section>
   );
